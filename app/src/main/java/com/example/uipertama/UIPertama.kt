@@ -90,7 +90,7 @@ fun ActPertama(modifier: Modifier){
                 .fillMaxSize()
         ){
             Text(
-                text =
+                text = stringResource(id = R.string.copy)
             )
         }
     }
