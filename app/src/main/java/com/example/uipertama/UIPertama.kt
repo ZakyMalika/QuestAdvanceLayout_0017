@@ -88,6 +88,10 @@ fun ActPertama(modifier: Modifier){
         Box(
             modifier = Modifier
                 .fillMaxSize()
-        )
+        ){
+            Text(
+                text =
+            )
+        }
     }
 }
