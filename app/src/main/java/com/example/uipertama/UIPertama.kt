@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
@@ -57,8 +59,12 @@ fun ActPertama(modifier: Modifier){
                 Image(
                     painter = gambar,
                     contentDescription = null,
-
+                    modifier = Modifier
+                        .size(size = 100.dp)
+                        .padding(all = 2.dp)
                 )
+
+                Spacer(modifier = Modifier.width(width = 30.dp  ))
             }
         }
     }
