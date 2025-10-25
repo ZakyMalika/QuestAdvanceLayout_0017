@@ -114,13 +114,14 @@ fun ActKedua(modifier: Modifier){
                 Row(){
                     Text(
                         text = stringResource(id = R.string.ket1),
-                        fontSize = 20.sp,
-                        fontFamily = FontFamily.Cursive,
+                        fontSize = 30.sp,
+
+//                        fontFamily = FontFamily.Cursive,
                         color =Color.Black,
 
                         modifier = Modifier.padding(top = 15.dp)
                     )
-                    val gambar = painterResource(id = R.drawable.me)
+                    val gambar = painterResource(id = R.drawable.search)
                     Image(
                         painter = gambar,
                         contentDescription = null,
@@ -146,7 +147,7 @@ fun ActKedua(modifier: Modifier){
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(all = 10.dp)
             ){
-                val gambar = painterResource(id = R.drawable.user)
+                val gambar = painterResource(id = R.drawable.phone)
                 Image(
                     painter = gambar,
                     contentDescription = null,
@@ -160,13 +161,13 @@ fun ActKedua(modifier: Modifier){
                 Row(){
                     Text(
                         text = stringResource(id = R.string.ket2),
-                        fontSize = 20.sp,
-                        fontFamily = FontFamily.Cursive,
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Serif,
                         color =Color.Black,
 
                         modifier = Modifier.padding(top = 15.dp)
                     )
-                    val gambar = painterResource(id = R.drawable.me)
+                    val gambar = painterResource(id = R.drawable.search)
                     Image(
                         painter = gambar,
                         contentDescription = null,
@@ -191,7 +192,7 @@ fun ActKedua(modifier: Modifier){
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(all = 10.dp)
             ){
-                val gambar = painterResource(id = R.drawable.user)
+                val gambar = painterResource(id = R.drawable.document)
                 Image(
                     painter = gambar,
                     contentDescription = null,
@@ -205,13 +206,13 @@ fun ActKedua(modifier: Modifier){
                 Row(){
                     Text(
                         text = stringResource(id = R.string.ket3),
-                        fontSize = 20.sp,
-                        fontFamily = FontFamily.Cursive,
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Monospace,
                         color =Color.Black,
 
                         modifier = Modifier.padding(top = 15.dp)
                     )
-                    val gambar = painterResource(id = R.drawable.me)
+                    val gambar = painterResource(id = R.drawable.search)
                     Image(
                         painter = gambar,
                         contentDescription = null,
