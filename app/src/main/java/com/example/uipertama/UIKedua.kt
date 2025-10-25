@@ -81,12 +81,12 @@ fun ActKedua(modifier: Modifier){
                 fontSize = 20.sp
             )
         }
-        Spacer(modifier = Modifier.height(height = 15.dp))
+        Spacer(modifier = Modifier.height(height = 10.dp))
 
         Card(modifier= Modifier
             .height(height = 120.dp)
             .fillMaxWidth(fraction = 1f)
-            .padding(all = 12.dp),
+            .padding(all = 10.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color.DarkGray
             )
@@ -97,7 +97,7 @@ fun ActKedua(modifier: Modifier){
         Card(modifier= Modifier
             .height(height = 120.dp)
             .fillMaxWidth(fraction = 1f)
-            .padding(all = 12.dp),
+            .padding(all = 10.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color.DarkGray
             )
@@ -108,7 +108,18 @@ fun ActKedua(modifier: Modifier){
         Card(modifier= Modifier
             .height(height = 120.dp)
             .fillMaxWidth(fraction = 1f)
-            .padding(all = 12.dp),
+            .padding(all = 10.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.DarkGray
+            )
+        ){
+
+        }
+
+        Card(modifier= Modifier
+            .height(height = 50.dp)
+            .fillMaxWidth()
+            .padding(all = 10.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color.DarkGray
             )
