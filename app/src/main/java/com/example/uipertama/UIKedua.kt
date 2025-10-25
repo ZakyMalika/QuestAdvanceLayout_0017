@@ -2,6 +2,7 @@ package com.example.uipertama
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -43,8 +44,8 @@ fun ActKedua(modifier: Modifier){
             modifier = Modifier
                 .size(size = 150.dp)
                 .padding(all = 1.dp)
-       //untuk menjadikan dia circle bisa menggunakan rounded atau circleshape
-//              .clip(RoundedCornerShape(100.dp))
+                 //untuk menjadikan dia circle bisa menggunakan rounded atau circleshape
+                //.clip(RoundedCornerShape(100.dp))
                 .clip(CircleShape)
         )
 
@@ -90,48 +91,161 @@ fun ActKedua(modifier: Modifier){
         Card(modifier= Modifier
             .height(height = 120.dp)
             .fillMaxWidth(fraction = 1f)
-            .padding(all = 10.dp),
+            .padding(all = 12.dp),
             colors = CardDefaults.cardColors(
-                containerColor = Color.DarkGray
+                containerColor = Color.Unspecified
             )
         ){
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(all = 10.dp)
+            ){
+                val gambar = painterResource(id = R.drawable.user)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(size = 100.dp)
+                        .padding(all = 2.dp)
+                )
+
+                Spacer(modifier = Modifier.width(width = 30.dp  ))
+
+                Row(){
+                    Text(
+                        text = stringResource(id = R.string.ket1),
+                        fontSize = 20.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color =Color.Black,
+
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    val gambar = painterResource(id = R.drawable.me)
+                    Image(
+                        painter = gambar,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(size = 100.dp)
+                            .padding(all = 2.dp)
+
+                    )
+                }
+            }
 
         }
 
         Card(modifier= Modifier
             .height(height = 120.dp)
             .fillMaxWidth(fraction = 1f)
-            .padding(all = 10.dp),
+            .padding(all = 12.dp),
             colors = CardDefaults.cardColors(
-                containerColor = Color.DarkGray
+                containerColor = Color.Unspecified
             )
         ){
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(all = 10.dp)
+            ){
+                val gambar = painterResource(id = R.drawable.user)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(size = 100.dp)
+                        .padding(all = 2.dp)
+                )
 
+                Spacer(modifier = Modifier.width(width = 30.dp  ))
+
+                Row(){
+                    Text(
+                        text = stringResource(id = R.string.ket2),
+                        fontSize = 20.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color =Color.Black,
+
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    val gambar = painterResource(id = R.drawable.me)
+                    Image(
+                        painter = gambar,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(size = 100.dp)
+                            .padding(all = 2.dp)
+
+                    )
+                }
+            }
         }
 
         Card(modifier= Modifier
             .height(height = 120.dp)
             .fillMaxWidth(fraction = 1f)
-            .padding(all = 10.dp),
+            .padding(all = 12.dp),
             colors = CardDefaults.cardColors(
-                containerColor = Color.DarkGray
+                containerColor = Color.Unspecified
             )
         ){
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(all = 10.dp)
+            ){
+                val gambar = painterResource(id = R.drawable.user)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(size = 100.dp)
+                        .padding(all = 2.dp)
+                )
 
+                Spacer(modifier = Modifier.width(width = 30.dp  ))
+
+                Row(){
+                    Text(
+                        text = stringResource(id = R.string.ket3),
+                        fontSize = 20.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color =Color.Black,
+
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    val gambar = painterResource(id = R.drawable.me)
+                    Image(
+                        painter = gambar,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(size = 100.dp)
+                            .padding(all = 2.dp)
+
+                    )
+                }
+            }
         }
 
         Spacer(modifier = Modifier.height(height = 20.dp))
         Card(modifier= Modifier
             .height(height = 75.dp)
             .width(width = 200.dp)
-
-            .padding(all = 10.dp),
+            .padding(all = 15.dp),
             colors = CardDefaults.cardColors(
-                containerColor = Color.DarkGray
+                containerColor = Color.Unspecified
             )
         ){
 
         }
-
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+        ){
+            Text(
+                text = stringResource(id = R.string.copy),
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 20.dp)
+                    .clip(RoundedCornerShape(size = 100.dp))
+            )
+        }
     }
 }
