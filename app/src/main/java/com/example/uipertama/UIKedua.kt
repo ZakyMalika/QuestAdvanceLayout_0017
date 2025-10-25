@@ -88,7 +88,7 @@ fun ActKedua(modifier: Modifier){
                 color = Color.White
             )
             Text(text = stringResource(id = R.string.desc),
-                fontSize = 20.sp,
+                fontSize = 22.sp,
                 color = Color.White
             )
         }
