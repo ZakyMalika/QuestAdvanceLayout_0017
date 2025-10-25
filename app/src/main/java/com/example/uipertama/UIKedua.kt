@@ -84,11 +84,15 @@ fun ActKedua(modifier: Modifier){
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(text = stringResource(id = R.string.nama),
-                fontSize = 25.sp,
+                fontSize = 20.sp,
                 color = Color.White
             )
+            Text(text = stringResource(id = R.string.ins),
+            fontSize = 15.sp,
+            color = Color.White
+            )
             Text(text = stringResource(id = R.string.desc),
-                fontSize = 22.sp,
+                fontSize = 20.sp,
                 color = Color.White
             )
         }
