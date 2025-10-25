@@ -237,7 +237,7 @@ fun ActKedua(modifier: Modifier){
             }
         }
 
-        Spacer(modifier = Modifier.height(height = 20.dp))
+        Spacer(modifier = Modifier.height(height = 10.dp))
         Card(modifier= Modifier
             .height(height = 75.dp)
             .width(width = 200.dp)
@@ -283,8 +283,8 @@ fun ActKedua(modifier: Modifier){
                 color = Color.White,
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
-                    .padding(bottom = 20.dp)
-                    .clip(RoundedCornerShape(size = 100.dp))
+                    .padding(bottom = 30.dp)
+
             )
         }
     }
