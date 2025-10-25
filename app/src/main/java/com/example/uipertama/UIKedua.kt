@@ -1,6 +1,7 @@
 package com.example.uipertama
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
@@ -27,55 +29,35 @@ fun ActKedua(modifier: Modifier){
             painter = gambar1,
             contentDescription = null,
             modifier = Modifier
-                .size(size = 200.dp)
+                .size(size = 100.dp)
                 .padding(all = 2.dp)
-                .clip(RoundedCornerShape(16.dp))
+                .clip(RoundedCornerShape(100.dp))
         )
 
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.padding(all = 10.dp)
+//          //otomatis memberikan jarak menggunakan spaceBy
+            horizontalArrangement = Arrangement.spacedBy(3.dp),
+            modifier = Modifier.padding(10.dp)
         ) {
-            Column() {
-                val gambar2 = painterResource(id = R.drawable.instagram)
-                Image(
-                    painter = gambar2,
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(size = 200.dp)
-                        .padding(all = 2.dp)
-                        .clip(RoundedCornerShape(16.dp))
-                )
-                val gambar3 = painterResource(id = R.drawable.x)
-                Image(
-                    painter = gambar3,
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(size = 200.dp)
-                        .padding(all = 2.dp)
-                        .clip(RoundedCornerShape(16.dp))
-                )
+            val gambarList = listOf(
+                R.drawable.instagram,
+                R.drawable.x,
+                R.drawable.facebook,
+                R.drawable.tiktok
+            )
 
-                val gambar4 = painterResource(id = R.drawable.facebook)
+            gambarList.forEach { gambar ->
                 Image(
-                    painter = gambar4,
+                    painter = painterResource(id = gambar),
                     contentDescription = null,
+                    contentScale = ContentScale.Crop,
                     modifier = Modifier
-                        .size(size = 200.dp)
-                        .padding(all = 2.dp)
-                        .clip(RoundedCornerShape(16.dp))
-                )
-
-                val gambar5 = painterResource(id = R.drawable.tiktok)
-                Image(
-                    painter = gambar5,
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(size = 200.dp)
-                        .padding(all = 2.dp)
-                        .clip(RoundedCornerShape(16.dp))
+                        .size(70.dp)
+                        .clip(RoundedCornerShape(100.dp))
                 )
             }
         }
+
     }
 }
