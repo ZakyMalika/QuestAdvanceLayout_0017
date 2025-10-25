@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -31,7 +32,7 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun ActKedua(modifier: Modifier){
     Column(modifier = Modifier
-        .padding(top = 100.dp)
+        .padding(top = 80.dp)
         .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ){
@@ -41,8 +42,10 @@ fun ActKedua(modifier: Modifier){
             contentDescription = null,
             modifier = Modifier
                 .size(size = 150.dp)
-                .padding(all = 2.dp)
-                .clip(RoundedCornerShape(100.dp))
+                .padding(all = 1.dp)
+       //untuk menjadikan dia circle bisa menggunakan rounded atau circleshape
+//              .clip(RoundedCornerShape(100.dp))
+                .clip(CircleShape)
         )
 
         Row(
@@ -51,13 +54,14 @@ fun ActKedua(modifier: Modifier){
             horizontalArrangement = Arrangement.spacedBy(3.dp),
             modifier = Modifier.padding(10.dp)
         ) {
+            //menggunakan list
             val gambarList = listOf(
                 R.drawable.instagram,
                 R.drawable.x,
                 R.drawable.facebook,
                 R.drawable.tiktok
             )
-
+            //menggunakan foreach agar langsung merender ke 4 tampilan
             gambarList.forEach { gambar ->
                 Image(
                     painter = painterResource(id = gambar),
@@ -116,9 +120,11 @@ fun ActKedua(modifier: Modifier){
 
         }
 
+        Spacer(modifier = Modifier.height(height = 20.dp))
         Card(modifier= Modifier
-            .height(height = 50.dp)
-            .fillMaxWidth()
+            .height(height = 75.dp)
+            .width(width = 200.dp)
+
             .padding(all = 10.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color.DarkGray
