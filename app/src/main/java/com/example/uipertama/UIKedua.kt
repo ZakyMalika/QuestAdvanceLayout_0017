@@ -234,7 +234,32 @@ fun ActKedua(modifier: Modifier){
                 containerColor = Color.Unspecified
             )
         ){
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(all = 10.dp)
+            ){
+                val gambar = painterResource(id = R.drawable.logout)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(size = 70.dp)
+                        .padding(all = 1.dp)
+                )
 
+//                Spacer(modifier = Modifier.width(width = 30.dp  ))
+
+                Row(){
+                    Text(
+                        text = stringResource(id = R.string.logout),
+                        fontSize = 18.sp,
+                        fontFamily = FontFamily.Monospace,
+                        color =Color.Black,
+
+                        modifier = Modifier.padding(top = 2.dp)
+                    )
+                }
+            }
         }
         Box(
             modifier = Modifier
