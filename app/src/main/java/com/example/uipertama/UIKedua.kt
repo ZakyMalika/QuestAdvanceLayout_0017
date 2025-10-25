@@ -1,6 +1,7 @@
 package com.example.uipertama
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -23,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
@@ -33,6 +35,8 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun ActKedua(modifier: Modifier){
     Column(modifier = Modifier
+        .background(colorResource(id = R.color.bg))
+//        .background(Color.LightGray)
         .padding(top = 80.dp)
         .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -80,10 +84,12 @@ fun ActKedua(modifier: Modifier){
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(text = stringResource(id = R.string.nama),
-                fontSize = 25.sp
+                fontSize = 25.sp,
+                color = Color.White
             )
             Text(text = stringResource(id = R.string.desc),
-                fontSize = 20.sp
+                fontSize = 20.sp,
+                color = Color.White
             )
         }
         Spacer(modifier = Modifier.height(height = 10.dp))
@@ -116,17 +122,19 @@ fun ActKedua(modifier: Modifier){
                         text = stringResource(id = R.string.ket1),
                         fontSize = 30.sp,
 
-//                        fontFamily = FontFamily.Cursive,
+                        fontFamily = FontFamily.Default,
                         color =Color.Black,
 
-                        modifier = Modifier.padding(top = 15.dp)
+                        modifier = Modifier.padding(top = 15.dp, start = 10.dp)
                     )
+
+                    Spacer(modifier = Modifier.width(width = 30.dp  ))
                     val gambar = painterResource(id = R.drawable.search)
                     Image(
                         painter = gambar,
                         contentDescription = null,
                         modifier = Modifier
-                            .size(size = 100.dp)
+                            .size(size = 50.dp)
                             .padding(all = 2.dp)
 
                     )
@@ -161,18 +169,20 @@ fun ActKedua(modifier: Modifier){
                 Row(){
                     Text(
                         text = stringResource(id = R.string.ket2),
-                        fontSize = 30.sp,
-                        fontFamily = FontFamily.Serif,
+                        fontSize = 25.sp,
+                        fontFamily = FontFamily.Default,
                         color =Color.Black,
 
-                        modifier = Modifier.padding(top = 15.dp)
+                        modifier = Modifier.padding(top = 20.dp, start = 5.dp)
                     )
+
+                    Spacer(modifier = Modifier.width(width = 30.dp  ))
                     val gambar = painterResource(id = R.drawable.search)
                     Image(
                         painter = gambar,
                         contentDescription = null,
                         modifier = Modifier
-                            .size(size = 100.dp)
+                            .size(size = 50.dp)
                             .padding(all = 2.dp)
 
                     )
@@ -201,23 +211,25 @@ fun ActKedua(modifier: Modifier){
                         .padding(all = 2.dp)
                 )
 
-                Spacer(modifier = Modifier.width(width = 30.dp  ))
+                Spacer(modifier = Modifier.width(width = 20.dp  ))
 
                 Row(){
                     Text(
                         text = stringResource(id = R.string.ket3),
                         fontSize = 30.sp,
-                        fontFamily = FontFamily.Monospace,
+                        fontFamily = FontFamily.Default,
                         color =Color.Black,
-
-                        modifier = Modifier.padding(top = 15.dp)
+                        modifier = Modifier.padding(top = 10.dp, start = 10.dp)
                     )
+
+                    Spacer(modifier = Modifier.width(width = 80.dp  ))
                     val gambar = painterResource(id = R.drawable.search)
                     Image(
                         painter = gambar,
+
                         contentDescription = null,
                         modifier = Modifier
-                            .size(size = 100.dp)
+                            .size(size = 50.dp)
                             .padding(all = 2.dp)
 
                     )
@@ -263,10 +275,12 @@ fun ActKedua(modifier: Modifier){
         }
         Box(
             modifier = Modifier
+
                 .fillMaxSize()
         ){
             Text(
                 text = stringResource(id = R.string.copy),
+                color = Color.White,
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
                     .padding(bottom = 20.dp)
