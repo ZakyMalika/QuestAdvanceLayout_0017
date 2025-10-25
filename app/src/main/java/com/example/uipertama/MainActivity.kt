@@ -20,9 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             UIPertamaTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ActPertama(
-
-                        modifier = Modifier.padding(innerPadding)
+                    ActKedua(modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
